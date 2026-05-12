@@ -23,7 +23,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.TravelKu" >
         <activity
-            android:name="com.travelku.app.MainActivity"
+            android:name="com.travelku.app.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +37,7 @@
         <activity android:name="com.travelku.app.DataPenumpangActivity" />
         <activity android:name="com.travelku.app.DetailPemesananActivity" />
         <activity android:name="com.travelku.app.RiwayatPemesananActivity" />
+        <activity android:name="com.travelku.app.MainActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

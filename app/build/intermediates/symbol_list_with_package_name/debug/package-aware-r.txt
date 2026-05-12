@@ -2982,10 +2982,14 @@ drawable bg_btn_blue
 drawable bg_btn_orange
 drawable bg_btn_outline_red
 drawable bg_btn_red
+drawable bg_button_primary
 drawable bg_cabin
 drawable bg_card
 drawable bg_header
 drawable bg_input
+drawable bg_input_field
+drawable bg_tab_active
+drawable bg_tab_container
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3194,7 +3198,9 @@ id btnAsal
 id btnBack
 id btnBatal
 id btnCari
+id btnDaftar
 id btnLanjut
+id btnMasuk
 id btnPesan
 id btnRiwayat
 id btnSelesai
@@ -3285,6 +3291,8 @@ id enterAlwaysCollapsed
 id etEmail
 id etHp
 id etNama
+id etPassword
+id etPhone
 id etSearch
 id etUmur
 id exitUntilCollapsed
@@ -3337,6 +3345,7 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id ivTogglePassword
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3536,6 +3545,10 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id stop
+id strengthBar1
+id strengthBar2
+id strengthBar3
+id strengthBar4
 id stretch
 id submenuarrow
 id submit_area
@@ -3587,6 +3600,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvAsal
+id tvDaftar
 id tvDetail
 id tvEmail
 id tvEmpty
@@ -3597,6 +3611,8 @@ id tvInfo
 id tvJam
 id tvKursiCount
 id tvLabel
+id tvLupaPassword
+id tvMasuk
 id tvNama
 id tvProv
 id tvRoute
@@ -3750,9 +3766,11 @@ layout abc_tooltip
 layout activity_data_penumpang
 layout activity_detail
 layout activity_katalog
+layout activity_login
 layout activity_main
 layout activity_pilih_kota
 layout activity_pilih_kursi
+layout activity_register
 layout activity_riwayat
 layout custom_dialog
 layout design_bottom_navigation_item
