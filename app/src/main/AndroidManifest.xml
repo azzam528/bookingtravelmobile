@@ -17,5 +17,6 @@
         <activity android:name=".DetailPemesananActivity" />
         <activity android:name=".RiwayatPemesananActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
     </application>
 </manifest>
