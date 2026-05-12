@@ -1,8 +1,8 @@
-#Tue May 12 14:24:24 ICT 2026
-base.0=C\:\\Users\\Administrator\\Downloads\\App Travel\\TravelKuApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\Administrator\\Downloads\\App Travel\\TravelKuApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\Administrator\\Downloads\\App Travel\\TravelKuApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.3=C\:\\Users\\Administrator\\Downloads\\App Travel\\TravelKuApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+#Wed May 13 01:08:25 WIB 2026
+base.0=C\:\\Users\\pinal\\AndroidStudioProjects\\bookingtravelmobile\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\pinal\\AndroidStudioProjects\\bookingtravelmobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\pinal\\AndroidStudioProjects\\bookingtravelmobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.3=C\:\\Users\\pinal\\AndroidStudioProjects\\bookingtravelmobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=2/classes.dex
