@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_header" android:padding="16dp" android:gravity="center_vertical">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@null" android:src="@android:drawable/ic_menu_revert"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Pilih Kursi" android:textColor="@color/white"
+            android:textSize="18sp" android:textStyle="bold" android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal">
+
+            <TextView android:id="@+id/tvHeader" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_card"
+                android:padding="12dp" android:gravity="center" android:textStyle="bold"/>
+
+            <LinearLayout android:id="@+id/cabin" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:layout_marginTop="16dp" android:padding="16dp"
+                android:background="@drawable/bg_cabin" android:gravity="end"/>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⬜ Tersedia   🟧 Dipilih   ⬛ Terisi" android:textSize="12sp"
+                    android:textColor="@color/muted"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/white" android:padding="14dp" android:gravity="center_vertical"
+        android:elevation="8dp">
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvSelected" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textColor="@color/muted"/>
+            <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/orange" android:textStyle="bold" android:textSize="16sp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btnLanjut" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_blue" android:text="Lanjutkan" android:textColor="@color/white"
+            android:paddingHorizontal="22dp" android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
