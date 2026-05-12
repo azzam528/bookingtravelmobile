@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_cabin.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_cabin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_input.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_item_penumpang_detail.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_penumpang_detail.xml"
+    },
+    {
+        "merged": "com.travelku.app-merged_res-32:/layout_activity_detail.xml.flat",
+        "source": "com.travelku.app-main-34:/layout/activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_btn_outline_red.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_btn_outline_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_btn_blue.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_btn_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_data_penumpang.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_data_penumpang.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_item_travel.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_travel.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_item_penumpang_input.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_penumpang_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_btn_red.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_btn_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_pilih_kota.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_pilih_kota.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_detail.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_btn_orange.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_btn_orange.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_item_kota.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_kota.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_item_riwayat.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_riwayat.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_katalog.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_katalog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_pilih_kursi.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_pilih_kursi.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_riwayat.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_riwayat.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_header.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\drawable_bg_card.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\drawable\\bg_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-merged_res-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_main.xml"
+    }
+]
