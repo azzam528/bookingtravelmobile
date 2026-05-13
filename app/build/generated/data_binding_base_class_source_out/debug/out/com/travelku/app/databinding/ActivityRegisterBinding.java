@@ -35,9 +35,6 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final EditText etPassword;
 
   @NonNull
-  public final EditText etPhone;
-
-  @NonNull
   public final ImageView ivTogglePassword;
 
   @NonNull
@@ -57,15 +54,13 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
   private ActivityRegisterBinding(@NonNull ScrollView rootView, @NonNull Button btnDaftar,
       @NonNull EditText etEmail, @NonNull EditText etNama, @NonNull EditText etPassword,
-      @NonNull EditText etPhone, @NonNull ImageView ivTogglePassword, @NonNull View strengthBar1,
-      @NonNull View strengthBar2, @NonNull View strengthBar3, @NonNull View strengthBar4,
-      @NonNull TextView tvMasuk) {
+      @NonNull ImageView ivTogglePassword, @NonNull View strengthBar1, @NonNull View strengthBar2,
+      @NonNull View strengthBar3, @NonNull View strengthBar4, @NonNull TextView tvMasuk) {
     this.rootView = rootView;
     this.btnDaftar = btnDaftar;
     this.etEmail = etEmail;
     this.etNama = etNama;
     this.etPassword = etPassword;
-    this.etPhone = etPhone;
     this.ivTogglePassword = ivTogglePassword;
     this.strengthBar1 = strengthBar1;
     this.strengthBar2 = strengthBar2;
@@ -125,12 +120,6 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.etPhone;
-      EditText etPhone = ViewBindings.findChildViewById(rootView, id);
-      if (etPhone == null) {
-        break missingId;
-      }
-
       id = R.id.ivTogglePassword;
       ImageView ivTogglePassword = ViewBindings.findChildViewById(rootView, id);
       if (ivTogglePassword == null) {
@@ -168,8 +157,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
       }
 
       return new ActivityRegisterBinding((ScrollView) rootView, btnDaftar, etEmail, etNama,
-          etPassword, etPhone, ivTogglePassword, strengthBar1, strengthBar2, strengthBar3,
-          strengthBar4, tvMasuk);
+          etPassword, ivTogglePassword, strengthBar1, strengthBar2, strengthBar3, strengthBar4,
+          tvMasuk);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

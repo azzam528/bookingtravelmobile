@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -30,6 +31,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnRiwayat;
 
   @NonNull
+  public final ImageButton btnSwap;
+
+  @NonNull
   public final LinearLayout btnTanggal;
 
   @NonNull
@@ -45,13 +49,14 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvTujuan;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout btnAsal,
-      @NonNull Button btnCari, @NonNull Button btnRiwayat, @NonNull LinearLayout btnTanggal,
-      @NonNull LinearLayout btnTujuan, @NonNull TextView tvAsal, @NonNull TextView tvTanggal,
-      @NonNull TextView tvTujuan) {
+      @NonNull Button btnCari, @NonNull Button btnRiwayat, @NonNull ImageButton btnSwap,
+      @NonNull LinearLayout btnTanggal, @NonNull LinearLayout btnTujuan, @NonNull TextView tvAsal,
+      @NonNull TextView tvTanggal, @NonNull TextView tvTujuan) {
     this.rootView = rootView;
     this.btnAsal = btnAsal;
     this.btnCari = btnCari;
     this.btnRiwayat = btnRiwayat;
+    this.btnSwap = btnSwap;
     this.btnTanggal = btnTanggal;
     this.btnTujuan = btnTujuan;
     this.tvAsal = tvAsal;
@@ -104,6 +109,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnSwap;
+      ImageButton btnSwap = ViewBindings.findChildViewById(rootView, id);
+      if (btnSwap == null) {
+        break missingId;
+      }
+
       id = R.id.btnTanggal;
       LinearLayout btnTanggal = ViewBindings.findChildViewById(rootView, id);
       if (btnTanggal == null) {
@@ -134,7 +145,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, btnAsal, btnCari, btnRiwayat,
+      return new ActivityMainBinding((LinearLayout) rootView, btnAsal, btnCari, btnRiwayat, btnSwap,
           btnTanggal, btnTujuan, tvAsal, tvTanggal, tvTujuan);
     }
     String missingId = rootView.getResources().getResourceName(id);

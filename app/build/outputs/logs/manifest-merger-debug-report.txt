@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] C:\Users\pinal\.gradle\caches\transforms-3\cc0b72b02bdcd59079ede77e6baa02ac\transformed\viewbinding-8.2.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\pinal\.gradle\caches\transforms-3\84114cdc67145947aeae5617e585aba8\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\pinal\.gradle\caches\transforms-3\3a9c143dc806935c0544adcf7cccee2c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -55,9 +55,13 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\pinal\.gradle\caches\transform
 		INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:3:5-66
+	android:name
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:3:22-64
 application
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:3:5-20:19
-INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:3:5-20:19
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:4:5-26:19
+INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:4:5-26:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\pinal\.gradle\caches\transforms-3\84114cdc67145947aeae5617e585aba8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\pinal\.gradle\caches\transforms-3\84114cdc67145947aeae5617e585aba8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\pinal\.gradle\caches\transforms-3\3a9c143dc806935c0544adcf7cccee2c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -79,55 +83,65 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\pinal\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\pinal\.gradle\caches\transforms-3\4dde0fce54f6341b6da19770f76a2130\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:5:9-33
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:6:9-33
 	android:allowBackup
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:4:9-35
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:5:9-35
 	android:theme
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:6:9-46
-activity#com.travelku.app.LoginActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:7:9-12:20
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:8:9-46
+	android:usesCleartextTraffic
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:7:9-44
+activity#com.travelku.app.SplashActivity
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:9:9-14:20
 	android:exported
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:7:49-72
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:9:50-73
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:7:19-48
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:9:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:8:13-11:29
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:10:13-13:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:9:17-69
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:11:17-69
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:9:25-66
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:11:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:10:17-77
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:12:17-77
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:10:27-74
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:12:27-74
 activity#com.travelku.app.PilihKotaActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:13:9-55
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:15:9-55
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:13:19-52
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:15:19-52
 activity#com.travelku.app.KatalogTravelActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:14:9-59
-	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:14:19-56
-activity#com.travelku.app.PilihKursiActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:15:9-56
-	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:15:19-53
-activity#com.travelku.app.DataPenumpangActivity
 ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:16:9-59
 	android:name
 		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:16:19-56
+activity#com.travelku.app.PilihKursiActivity
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:17:9-56
+	android:name
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:17:19-53
+activity#com.travelku.app.DataPenumpangActivity
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:18:9-59
+	android:name
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:18:19-56
 activity#com.travelku.app.DetailPemesananActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:17:9-61
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:19:9-61
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:17:19-58
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:19:19-58
 activity#com.travelku.app.RiwayatPemesananActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:18:9-62
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:20:9-62
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:18:19-59
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:20:19-59
 activity#com.travelku.app.MainActivity
-ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:19:9-50
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:21:9-50
 	android:name
-		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:19:19-47
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:21:19-47
+activity#com.travelku.app.RegisterActivity
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:22:9-54
+	android:name
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:22:19-51
+activity#com.travelku.app.LoginActivity
+ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:23:9-51
+	android:name
+		ADDED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml:23:19-48
 uses-sdk
 INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\pinal\AndroidStudioProjects\bookingtravelmobile\app\src\main\AndroidManifest.xml

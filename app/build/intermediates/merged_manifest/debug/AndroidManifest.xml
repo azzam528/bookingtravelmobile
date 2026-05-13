@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.travelku.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -21,9 +23,10 @@
         android:extractNativeLibs="false"
         android:label="TravelKu"
         android:testOnly="true"
-        android:theme="@style/Theme.TravelKu" >
+        android:theme="@style/Theme.TravelKu"
+        android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.travelku.app.LoginActivity"
+            android:name="com.travelku.app.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +41,8 @@
         <activity android:name="com.travelku.app.DetailPemesananActivity" />
         <activity android:name="com.travelku.app.RiwayatPemesananActivity" />
         <activity android:name="com.travelku.app.MainActivity" />
+        <activity android:name="com.travelku.app.RegisterActivity" />
+        <activity android:name="com.travelku.app.LoginActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
