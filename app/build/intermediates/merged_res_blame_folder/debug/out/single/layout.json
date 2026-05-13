@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_detail.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\item_travel.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_travel.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_pilih_kursi.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_pilih_kursi.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_data_penumpang.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_data_penumpang.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_pilih_kota.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_pilih_kota.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_katalog.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_katalog.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\item_riwayat.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_riwayat.xml"
+    },
+    {
+        "merged": "com.travelku.app-mergeDebugResources-31:/layout/activity_login.xml",
+        "source": "com.travelku.app-main-34:/layout/activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\item_penumpang_detail.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_penumpang_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_riwayat.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_riwayat.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\item_kota.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_kota.xml"
+    },
+    {
+        "merged": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-mergeDebugResources-31:\\layout\\item_penumpang_input.xml",
+        "source": "C:\\Users\\pinal\\.gradle\\daemon\\8.5\\com.travelku.app-main-34:\\layout\\item_penumpang_input.xml"
+    }
+]

@@ -4,22 +4,19 @@
         android:allowBackup="true"
         android:label="TravelKu"
         android:theme="@style/Theme.TravelKu">
-
-        <!-- Splash (launcher dipindah ke sini) -->
-        <activity android:name=".SplashActivity" android:exported="true">
+        <activity android:name=".LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Main (hapus exported + intent-filter) -->
-        <activity android:name=".MainActivity" />
         <activity android:name=".PilihKotaActivity" />
         <activity android:name=".KatalogTravelActivity" />
         <activity android:name=".PilihKursiActivity" />
         <activity android:name=".DataPenumpangActivity" />
         <activity android:name=".DetailPemesananActivity" />
         <activity android:name=".RiwayatPemesananActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
     </application>
 </manifest>

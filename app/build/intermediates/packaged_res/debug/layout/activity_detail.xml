@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_header" android:padding="16dp" android:gravity="center_vertical">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@null" android:src="@android:drawable/ic_menu_revert"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Detail Pemesanan" android:textColor="@color/white"
+            android:textSize="18sp" android:textStyle="bold" android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:padding="14dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PERJALANAN" android:textColor="@color/muted"
+                    android:textStyle="bold" android:textSize="11sp" android:layout_marginBottom="6dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingVertical="3dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Travel" android:textColor="@color/muted"/>
+                    <TextView android:id="@+id/tvTravel" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/text" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingVertical="3dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Rute" android:textColor="@color/muted"/>
+                    <TextView android:id="@+id/tvRute" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/text" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingVertical="3dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Tanggal" android:textColor="@color/muted"/>
+                    <TextView android:id="@+id/tvTanggal" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/text" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingVertical="3dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Jam" android:textColor="@color/muted"/>
+                    <TextView android:id="@+id/tvJam" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/text" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingVertical="3dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Status" android:textColor="@color/muted"/>
+                    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/penumpangContainer" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:padding="14dp" android:orientation="vertical"
+                android:layout_marginTop="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PEMBAYARAN" android:textColor="@color/muted"
+                    android:textStyle="bold" android:textSize="11sp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="6dp">
+                    <TextView android:id="@+id/tvKursiCount" android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:textColor="@color/text"/>
+                    <TextView android:id="@+id/tvTotalAtas" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/text"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/border" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="Total"
+                        android:textStyle="bold" android:textColor="@color/text"/>
+                    <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/orange"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="14dp">
+                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnBatal" android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:background="@drawable/bg_btn_red"
+                    android:text="Batalkan" android:textColor="@color/white" android:textStyle="bold"
+                    android:layout_marginEnd="8dp" android:padding="12dp"/>
+                <Button android:id="@+id/btnSelesai" android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:background="@drawable/bg_btn_blue"
+                    android:text="Selesai" android:textColor="@color/white" android:textStyle="bold"
+                    android:padding="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
