@@ -63,7 +63,13 @@ data class PemesananResponse(
     val jumlah_kursi: Int,
     val total_harga: Double,
     val status_pemesanan: String,
-    val tanggal_pemesanan: String
+    val tanggal_pemesanan: String,
+
+    val nama_travel: String? = null,
+    val asal: String? = null,
+    val tujuan: String? = null,
+    val tanggal_berangkat: String? = null,
+    val jam_berangkat: String? = null
 )
 
 data class LoginRequest(

@@ -55,10 +55,10 @@ class DetailPemesananActivity : AppCompatActivity() {
             try {
                 val p = ApiClient.instance.getDetailPemesanan(idPemesanan)
 
-                b.tvTravel.text = namaTravel
-                b.tvRute.text = "$asal → $tujuan"
+                b.tvTravel.text = p.nama_travel
+                b.tvRute.text = "${p.asal} → ${p.tujuan}"
                 b.tvTanggal.text = p.tanggal_pemesanan.take(10)
-                b.tvJam.text = jamBerangkat
+                b.tvJam.text = p.jam_berangkat
                 b.tvStatus.text = p.status_pemesanan
                 b.tvKursiCount.text = "${p.jumlah_kursi} kursi"
                 b.tvTotal.text = DataSource.rupiah(p.total_harga.toInt())
