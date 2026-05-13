@@ -55,6 +55,7 @@ class KatalogTravelActivity : AppCompatActivity() {
                     .putExtra("tanggal", tanggal)
                     .putExtra("jam_berangkat", jadwal.jam_berangkat)
                     .putExtra("harga_tiket", jadwal.harga_tiket)
+                    .putExtra("id_bus", jadwal.id_bus)
             )
         }
 
@@ -66,11 +67,23 @@ class KatalogTravelActivity : AppCompatActivity() {
                 adapter.applyFilter(s?.toString().orEmpty())
             }
 
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun beforeTextChanged(
+                p0: CharSequence?,
+                p1: Int,
+                p2: Int,
+                p3: Int
+            ) {}
+
+            override fun onTextChanged(
+                p0: CharSequence?,
+                p1: Int,
+                p2: Int,
+                p3: Int
+            ) {}
         })
 
         val sortOptions = arrayOf("Termurah", "Termahal", "Pagi", "Malam")
+
         b.spSort.adapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_dropdown_item,
@@ -78,7 +91,12 @@ class KatalogTravelActivity : AppCompatActivity() {
         )
 
         b.spSort.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
+            override fun onItemSelected(
+                p: AdapterView<*>?,
+                v: View?,
+                pos: Int,
+                id: Long
+            ) {
                 adapter.applySort(sortOptions[pos])
             }
 
@@ -91,12 +109,18 @@ class KatalogTravelActivity : AppCompatActivity() {
     private fun loadJadwal() {
         lifecycleScope.launch {
             try {
-                val result = ApiClient.instance.searchJadwal(
+                val busList = ApiClient.instance.getBus()
+
+                val busMap = busList.associate {
+                    it.id_bus to it.nama_travel
+                }
+
+                val jadwalList = ApiClient.instance.searchJadwal(
                     rute = idRute,
                     tanggal = tanggal
                 )
 
-                if (result.isEmpty()) {
+                if (jadwalList.isEmpty()) {
                     Toast.makeText(
                         this@KatalogTravelActivity,
                         "Jadwal tidak ditemukan",
@@ -104,7 +128,8 @@ class KatalogTravelActivity : AppCompatActivity() {
                     ).show()
                 }
 
-                adapter.updateData(result)
+                adapter.updateBusMap(busMap)
+                adapter.updateData(jadwalList)
 
             } catch (e: Exception) {
                 Toast.makeText(
@@ -125,6 +150,13 @@ class TravelAdapter(
     private var query = ""
     private var sort = "Termurah"
     private var data = all.toMutableList()
+
+    private var busMap: Map<Int, String> = emptyMap()
+
+    fun updateBusMap(newMap: Map<Int, String>) {
+        busMap = newMap
+        notifyDataSetChanged()
+    }
 
     fun updateData(newData: List<JadwalResponse>) {
         all.clear()
@@ -147,7 +179,10 @@ class TravelAdapter(
 
     private fun recompute(): MutableList<JadwalResponse> {
         val filtered = all.filter {
-            it.jam_berangkat.contains(query, true) ||
+            val namaTravel = busMap[it.id_bus] ?: ""
+
+            namaTravel.contains(query, true) ||
+                    it.jam_berangkat.contains(query, true) ||
                     it.harga_tiket.toString().contains(query, true)
         }
 
@@ -175,7 +210,7 @@ class TravelAdapter(
     override fun onBindViewHolder(h: VH, pos: Int) {
         val t = data[pos]
 
-        h.nama.text = "Travel ID Bus ${t.id_bus}"
+        h.nama.text = busMap[t.id_bus] ?: "Travel ${t.id_bus}"
         h.jam.text = "Berangkat ${t.jam_berangkat}"
         h.harga.text = rupiah(t.harga_tiket)
 
