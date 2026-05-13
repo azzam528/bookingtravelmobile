@@ -36,6 +36,14 @@ class MainActivity : AppCompatActivity() {
         b.btnTujuan.setOnClickListener {
             pickTujuan.launch(Intent(this, PilihKotaActivity::class.java).putExtra("title", "Pilih Kota Tujuan"))
         }
+
+        b.btnSwap.setOnClickListener {
+            val temp = asal
+            asal = tujuan
+            tujuan = temp
+            render()
+        }
+
         b.btnTanggal.setOnClickListener { showDate() }
         b.btnRiwayat.setOnClickListener {
             startActivity(Intent(this, RiwayatPemesananActivity::class.java))
@@ -66,3 +74,5 @@ class MainActivity : AppCompatActivity() {
         b.btnCari.isEnabled = asal != null && tujuan != null && asal?.id != tujuan?.id
     }
 }
+
+
