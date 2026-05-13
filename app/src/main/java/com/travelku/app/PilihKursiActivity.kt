@@ -16,6 +16,7 @@ class PilihKursiActivity : AppCompatActivity() {
     private lateinit var b: ActivityPilihKursiBinding
 
     private var idJadwal = 0
+    private var namaTravel = "-"
     private var asal = ""
     private var tujuan = ""
     private var tanggal = ""
@@ -32,6 +33,7 @@ class PilihKursiActivity : AppCompatActivity() {
         setContentView(b.root)
 
         idJadwal = intent.getIntExtra("id_jadwal", 0)
+        namaTravel = intent.getStringExtra("nama_travel") ?: "-"
         asal = intent.getStringExtra("asal") ?: ""
         tujuan = intent.getStringExtra("tujuan") ?: ""
         tanggal = intent.getStringExtra("tanggal") ?: ""
@@ -39,7 +41,7 @@ class PilihKursiActivity : AppCompatActivity() {
         hargaTiket = intent.getDoubleExtra("harga_tiket", 0.0)
 
         b.btnBack.setOnClickListener { finish() }
-        b.tvHeader.text = "$asal → $tujuan • $jamBerangkat"
+        b.tvHeader.text = "$namaTravel • $jamBerangkat"
 
         val rows = listOf(
             listOf(1, 0, 0),
@@ -71,6 +73,7 @@ class PilihKursiActivity : AppCompatActivity() {
             startActivity(
                 Intent(this, DataPenumpangActivity::class.java)
                     .putExtra("id_jadwal", idJadwal)
+                    .putExtra("nama_travel", namaTravel)
                     .putExtra("asal", asal)
                     .putExtra("tujuan", tujuan)
                     .putExtra("tanggal", tanggal)

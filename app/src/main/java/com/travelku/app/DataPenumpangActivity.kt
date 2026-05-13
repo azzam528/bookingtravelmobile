@@ -21,6 +21,7 @@ class DataPenumpangActivity : AppCompatActivity() {
     private lateinit var b: ActivityDataPenumpangBinding
 
     private var idJadwal = 0
+    private var namaTravel = "-"
     private var asal = ""
     private var tujuan = ""
     private var tanggal = ""
@@ -38,6 +39,7 @@ class DataPenumpangActivity : AppCompatActivity() {
         setContentView(b.root)
 
         idJadwal = intent.getIntExtra("id_jadwal", 0)
+        namaTravel = intent.getStringExtra("nama_travel") ?: "-"
         asal = intent.getStringExtra("asal") ?: ""
         tujuan = intent.getStringExtra("tujuan") ?: ""
         tanggal = intent.getStringExtra("tanggal") ?: ""
@@ -48,7 +50,7 @@ class DataPenumpangActivity : AppCompatActivity() {
         b.btnBack.setOnClickListener { finish() }
 
         b.tvRute.text = "$asal → $tujuan"
-        b.tvDetail.text = "$tanggal • $jamBerangkat • Kursi ${kursi.joinToString(", ")}"
+        b.tvDetail.text = "$namaTravel • $tanggal • $jamBerangkat • Kursi ${kursi.joinToString(", ")}"
         b.tvHarga.text = DataSource.rupiah((hargaTiket * kursi.size).toInt())
 
         kursi.forEachIndexed { i, k ->
@@ -134,6 +136,10 @@ class DataPenumpangActivity : AppCompatActivity() {
                 startActivity(
                     Intent(this@DataPenumpangActivity, DetailPemesananActivity::class.java)
                         .putExtra("id_pemesanan", pemesanan.id_pemesanan)
+                        .putExtra("nama_travel", namaTravel)
+                        .putExtra("asal", asal)
+                        .putExtra("tujuan", tujuan)
+                        .putExtra("jam_berangkat", jamBerangkat)
                 )
 
                 finish()

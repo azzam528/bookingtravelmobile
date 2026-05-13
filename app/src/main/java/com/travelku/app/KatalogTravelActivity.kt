@@ -47,9 +47,12 @@ class KatalogTravelActivity : AppCompatActivity() {
         b.btnBack.setOnClickListener { finish() }
 
         adapter = TravelAdapter(mutableListOf()) { jadwal ->
+            val namaTravel = getNamaTravel(jadwal.id_bus)
+
             startActivity(
                 Intent(this, PilihKursiActivity::class.java)
                     .putExtra("id_jadwal", jadwal.id_jadwal)
+                    .putExtra("nama_travel", namaTravel)
                     .putExtra("asal", asal)
                     .putExtra("tujuan", tujuan)
                     .putExtra("tanggal", tanggal)
@@ -71,6 +74,7 @@ class KatalogTravelActivity : AppCompatActivity() {
         })
 
         val sortOptions = arrayOf("Termurah", "Termahal", "Pagi", "Malam")
+
         b.spSort.adapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_dropdown_item,
@@ -113,6 +117,15 @@ class KatalogTravelActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
+        }
+    }
+
+    private fun getNamaTravel(idBus: Int): String {
+        return when (idBus) {
+            1 -> "TravelKu Express"
+            2 -> "TravelKu Premium"
+            3 -> "TravelKu Executive"
+            else -> "TravelKu"
         }
     }
 }
@@ -175,7 +188,14 @@ class TravelAdapter(
     override fun onBindViewHolder(h: VH, pos: Int) {
         val t = data[pos]
 
-        h.nama.text = "Travel ID Bus ${t.id_bus}"
+        val namaTravel = when (t.id_bus) {
+            1 -> "TravelKu Express"
+            2 -> "TravelKu Premium"
+            3 -> "TravelKu Executive"
+            else -> "TravelKu"
+        }
+
+        h.nama.text = namaTravel
         h.jam.text = "Berangkat ${t.jam_berangkat}"
         h.harga.text = rupiah(t.harga_tiket)
 
