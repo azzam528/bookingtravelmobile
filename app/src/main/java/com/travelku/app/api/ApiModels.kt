@@ -1,11 +1,12 @@
-package com.travelku.app
+package com.travelku.app.api
+import java.io.Serializable
 
 data class KotaResponse(
     val id_kota: Int,
     val nama_kota: String,
     val provinsi: String,
     val status_aktif: Boolean
-)
+): Serializable
 
 data class BusResponse(
     val id_bus: Int,

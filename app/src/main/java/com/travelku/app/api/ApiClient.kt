@@ -1,4 +1,4 @@
-package com.travelku.app
+package com.travelku.app.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
