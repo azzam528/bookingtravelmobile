@@ -1,5 +1,9 @@
 package com.travelku.app
 
+import android.util.Log
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import com.travelku.app.api.RetrofitInstance
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -30,31 +34,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(s)
         b = ActivityMainBinding.inflate(layoutInflater); setContentView(b.root)
 
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitInstance.api.getHome()
+
+                if (response.isSuccessful) {
+                    Log.d("API_TEST", response.body()?.message ?: "Response kosong")
+                } else {
+                    Log.e("API_TEST", "Gagal: ${response.code()}")
+                }
+
+            } catch (e: Exception) {
+                Log.e("API_TEST", "Error: ${e.message}")
+            }
+        }
+
         b.btnAsal.setOnClickListener {
             pickAsal.launch(Intent(this, PilihKotaActivity::class.java).putExtra("title", "Pilih Kota Asal"))
         }
-        b.btnTujuan.setOnClickListener {
-            pickTujuan.launch(Intent(this, PilihKotaActivity::class.java).putExtra("title", "Pilih Kota Tujuan"))
-        }
 
-        b.btnSwap.setOnClickListener {
-            val temp = asal
-            asal = tujuan
-            tujuan = temp
-            render()
-        }
 
-        b.btnTanggal.setOnClickListener { showDate() }
-        b.btnRiwayat.setOnClickListener {
-            startActivity(Intent(this, RiwayatPemesananActivity::class.java))
-        }
-        b.btnCari.setOnClickListener {
-            if (asal != null && tujuan != null && asal!!.id != tujuan!!.id) {
-                startActivity(Intent(this, KatalogTravelActivity::class.java)
-                    .putExtra("asal", asal).putExtra("tujuan", tujuan).putExtra("tanggal", tanggal))
-            }
-        }
-        render()
     }
 
     private fun showDate() {
