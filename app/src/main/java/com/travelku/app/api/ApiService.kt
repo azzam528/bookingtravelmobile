@@ -56,4 +56,7 @@ interface ApiService {
 
     @PUT("pemesanan/{id}/batal")
     suspend fun batalPemesanan(@Path("id") id: Int): PemesananResponse
+
+    @GET("pemesanan/{id}")
+    suspend fun getDetailPemesanan(@Path("id") id: Int): PemesananResponse
 }
