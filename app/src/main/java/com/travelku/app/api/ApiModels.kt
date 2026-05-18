@@ -48,6 +48,7 @@ data class PenumpangResponse(
 )
 
 data class PemesananRequest(
+    val id_user: Int,
     val id_penumpang: Int,
     val id_jadwal: Int,
     val nomor_kursi: String,
@@ -78,6 +79,7 @@ data class LoginRequest(
 )
 
 data class LoginResponse(
+    val id_user: Int,
     val access_token: String,
     val token_type: String
 )

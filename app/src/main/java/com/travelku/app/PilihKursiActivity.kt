@@ -9,7 +9,10 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import com.travelku.app.api.ApiClient
 import com.travelku.app.databinding.ActivityPilihKursiBinding
+import kotlinx.coroutines.launch
 
 class PilihKursiActivity : AppCompatActivity() {
 
@@ -24,7 +27,7 @@ class PilihKursiActivity : AppCompatActivity() {
     private var hargaTiket = 0.0
 
     private val selected = mutableListOf<Int>()
-    private val taken = DataSource.KURSI_TERPAKAI
+    private val taken = mutableListOf<Int>()
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
@@ -42,6 +45,53 @@ class PilihKursiActivity : AppCompatActivity() {
 
         b.btnBack.setOnClickListener { finish() }
         b.tvHeader.text = "$namaTravel • $jamBerangkat"
+
+        lifecycleScope.launch {
+            loadKursiTerisi()
+            renderKursi()
+            updateBar()
+        }
+
+        b.btnLanjut.setOnClickListener {
+            if (selected.isEmpty()) return@setOnClickListener
+
+            startActivity(
+                Intent(this, DataPenumpangActivity::class.java)
+                    .putExtra("id_jadwal", idJadwal)
+                    .putExtra("nama_travel", namaTravel)
+                    .putExtra("asal", asal)
+                    .putExtra("tujuan", tujuan)
+                    .putExtra("tanggal", tanggal)
+                    .putExtra("jam_berangkat", jamBerangkat)
+                    .putExtra("harga_tiket", hargaTiket)
+                    .putExtra("kursi", ArrayList(selected.sorted()))
+            )
+        }
+    }
+
+    private suspend fun loadKursiTerisi() {
+        try {
+            val response = ApiClient.instance.getKursiTerisi(idJadwal)
+
+            taken.clear()
+
+            response.forEach { nomor ->
+                nomor.toIntOrNull()?.let {
+                    taken.add(it)
+                }
+            }
+
+        } catch (e: Exception) {
+            Toast.makeText(
+                this@PilihKursiActivity,
+                "Gagal load kursi: ${e.message}",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+    private fun renderKursi() {
+        b.cabin.removeAllViews()
 
         val rows = listOf(
             listOf(1, 0, 0),
@@ -64,24 +114,6 @@ class PilihKursiActivity : AppCompatActivity() {
 
             b.cabin.addView(rowLayout)
         }
-
-        updateBar()
-
-        b.btnLanjut.setOnClickListener {
-            if (selected.isEmpty()) return@setOnClickListener
-
-            startActivity(
-                Intent(this, DataPenumpangActivity::class.java)
-                    .putExtra("id_jadwal", idJadwal)
-                    .putExtra("nama_travel", namaTravel)
-                    .putExtra("asal", asal)
-                    .putExtra("tujuan", tujuan)
-                    .putExtra("tanggal", tanggal)
-                    .putExtra("jam_berangkat", jamBerangkat)
-                    .putExtra("harga_tiket", hargaTiket)
-                    .putExtra("kursi", ArrayList(selected.sorted()))
-            )
-        }
     }
 
     private fun emptySeat(): View {
@@ -95,6 +127,7 @@ class PilihKursiActivity : AppCompatActivity() {
     private fun seatButton(n: Int): Button {
         return Button(this).apply {
             text = n.toString()
+
             layoutParams = LinearLayout.LayoutParams(dp(56), dp(56)).apply {
                 setMargins(dp(6), dp(6), dp(6), dp(6))
             }
@@ -103,7 +136,14 @@ class PilihKursiActivity : AppCompatActivity() {
             styleSeat(this, n)
 
             setOnClickListener {
-                if (taken.contains(n)) return@setOnClickListener
+                if (taken.contains(n)) {
+                    Toast.makeText(
+                        this@PilihKursiActivity,
+                        "Kursi sudah terisi",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    return@setOnClickListener
+                }
 
                 if (!selected.contains(n) && selected.size >= 4) {
                     Toast.makeText(
@@ -131,16 +171,19 @@ class PilihKursiActivity : AppCompatActivity() {
             taken.contains(n) -> {
                 btn.setBackgroundColor(Color.parseColor("#E2E8F0"))
                 btn.setTextColor(Color.parseColor("#94A3B8"))
+                btn.isEnabled = false
             }
 
             selected.contains(n) -> {
                 btn.setBackgroundColor(Color.parseColor("#F59E0B"))
                 btn.setTextColor(Color.WHITE)
+                btn.isEnabled = true
             }
 
             else -> {
                 btn.setBackgroundColor(Color.WHITE)
                 btn.setTextColor(Color.parseColor("#2563EB"))
+                btn.isEnabled = true
             }
         }
     }

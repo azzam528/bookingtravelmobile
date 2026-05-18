@@ -222,9 +222,9 @@ class TravelAdapter(
     override fun onBindViewHolder(h: VH, pos: Int) {
         val t = data[pos]
 
-<<<<<<< HEAD
+
         h.nama.text = busMap[t.id_bus] ?: "Travel ${t.id_bus}"
-=======
+
         val namaTravel = when (t.id_bus) {
             1 -> "TravelKu Express"
             2 -> "TravelKu Premium"
@@ -233,7 +233,7 @@ class TravelAdapter(
         }
 
         h.nama.text = namaTravel
->>>>>>> origin/farrel
+
         h.jam.text = "Berangkat ${t.jam_berangkat}"
         h.harga.text = rupiah(t.harga_tiket)
 

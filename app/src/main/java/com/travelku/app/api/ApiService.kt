@@ -8,6 +8,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 import retrofit2.http.Header
 
+
 interface ApiService {
 
     @POST("register")
@@ -51,12 +52,20 @@ interface ApiService {
     @POST("pemesanan")
     suspend fun createPemesanan(@Body request: PemesananRequest): PemesananResponse
 
-    @GET("pemesanan/riwayat")
-    suspend fun getRiwayatPemesanan(): List<PemesananResponse>
+    @GET("pemesanan/riwayat/{id_user}")
+    suspend fun getRiwayatPemesanan(
+        @Path("id_user") idUser: Int
+    ): List<PemesananResponse>
 
     @PUT("pemesanan/{id}/batal")
     suspend fun batalPemesanan(@Path("id") id: Int): PemesananResponse
 
     @GET("pemesanan/{id}")
     suspend fun getDetailPemesanan(@Path("id") id: Int): PemesananResponse
+
+
+    @GET("kursi/{id_jadwal}")
+    suspend fun getKursiTerisi(
+        @Path("id_jadwal") idJadwal: Int
+    ): List<String>
 }

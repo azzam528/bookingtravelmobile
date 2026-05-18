@@ -117,8 +117,17 @@ class DataPenumpangActivity : AppCompatActivity() {
                     )
                 )
 
+                val pref = getSharedPreferences("travelku", MODE_PRIVATE)
+                val idUser = pref.getInt("id_user", 0)
+
+                if (idUser == 0) {
+                    Toast.makeText(this@DataPenumpangActivity, "User belum login", Toast.LENGTH_SHORT).show()
+                    return@launch
+                }
+
                 val pemesanan = ApiClient.instance.createPemesanan(
                     PemesananRequest(
+                        id_user = idUser,
                         id_penumpang = penumpang.id_penumpang,
                         id_jadwal = idJadwal,
                         nomor_kursi = kursi.joinToString(","),

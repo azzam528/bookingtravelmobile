@@ -67,9 +67,23 @@ class RiwayatPemesananActivity : AppCompatActivity() {
     private fun reload() {
         lifecycleScope.launch {
             try {
-                val list = ApiClient.instance.getRiwayatPemesanan()
+                val pref = getSharedPreferences("travelku", MODE_PRIVATE)
+                val idUser = pref.getInt("id_user", 0)
+
+                if (idUser == 0) {
+                    Toast.makeText(
+                        this@RiwayatPemesananActivity,
+                        "User belum login",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    return@launch
+                }
+
+                val list = ApiClient.instance.getRiwayatPemesanan(idUser)
+
                 adapter.setData(list)
                 b.tvEmpty.visibility = if (list.isEmpty()) View.VISIBLE else View.GONE
+
             } catch (e: Exception) {
                 Toast.makeText(
                     this@RiwayatPemesananActivity,

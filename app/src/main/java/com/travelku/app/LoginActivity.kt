@@ -28,11 +28,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btnMasuk.setOnClickListener {
-            val email = etEmail.text.toString()
-            val password = etPassword.text.toString()
+            val email = etEmail.text.toString().trim()
+            val password = etPassword.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Email dan password wajib diisi", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Email dan password wajib diisi",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
 
@@ -45,9 +49,22 @@ class LoginActivity : AppCompatActivity() {
                         )
                     )
 
-                    Toast.makeText(this@LoginActivity, "Login berhasil", Toast.LENGTH_SHORT).show()
+                    val pref = getSharedPreferences("travelku", MODE_PRIVATE)
 
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    pref.edit()
+                        .putInt("id_user", response.id_user)
+                        .putString("access_token", response.access_token)
+                        .apply()
+
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Login berhasil",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    startActivity(
+                        Intent(this@LoginActivity, MainActivity::class.java)
+                    )
                     finish()
 
                 } catch (e: Exception) {
